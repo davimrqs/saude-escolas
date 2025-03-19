@@ -2,18 +2,164 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --titulo-color: #1E2D59; 
+    --button-color: #F2A25C;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 5px solid #bfd5f0;
+}
+
+nav {
+    display: flex;
 }
 
 body {
     height: 100vh;
     box-sizing: border-box;
+    background-color: #CEDEF2;
 }
 
-nav {
-
+header {
+    display: flex;
+    flex: 1 1 100vw;
+    background-color: #8DAEF2;
 }
 
-.apresentacao {
+header #logo {
+    margin-left: 5%;
+    width: 8rem;
+}
+
+.menu__nav {
+    flex: 1 1 100vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu__nav a {
+    margin: 1% 5% 1% 5%;
+}
+
+.introducao {
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 15% 10% 15%;
+    gap: 20px;
+    align-items: center;
+}
+
+.introducao img {
+    border-radius: 1rem;
+}
+
+.introducao p::first-letter {
+    margin-left: 5%;
+}
+
+.introducao__conteudo {
+    width: 614px;
+}
+
+.introducao__links {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.introducao__links__link {
+    background-color: var(--button-color);
+    border: 10px solid var(--button-color);
+    font-weight: bold;
+    border-radius: 15px;
+    color: white;
+}
+
+.introducao__links__link:hover {
+    /* Nada implementado no passar do mouse */
+}
+
+.introducao__conteudo__titulo {
+    margin-bottom: 5%;
+    font-size: 3rem;
+    color: var(--titulo-color);
+}
+
+.servicos-saude {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 15% 10% 15%;
+    gap: 20px;
+    align-items: center;
+}
+
+.servicos-saude__conteudo {
     display: flex;
     flex-wrap: wrap;
+    width: 614px;
+}
+
+.servicos-saude__conteudo__titulo {
+    font-size: 3rem;
+    color: var(--titulo-color);
+}
+
+.servicos-saude__conteudo__subtitulo {
+    font-size: 2rem;
+    color: var(--titulo-color);
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.servicos-saude img {
+    border-radius: 1rem;
+    width: 30%;
+}
+
+.servicos-saude__links {
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.servicos-saude__links__link {
+    background-color: var(--button-color);
+    border: 10px solid var(--button-color);
+    font-weight: bold;
+    border-radius: 15px;
+    color: white;
+}
+
+footer {
+    display: flex;
+    height: 50px;
+    background-color: red;
+}
+
+@media only screen and (max-width: 712px){
+    .introducao {
+        flex-wrap: wrap-reverse;
+    }
+    
+    .servicos-saude {
+        flex-wrap: wrap-reverse;
+    }
+
+    .introducao img {
+        width: 15rem;
+    }
 }

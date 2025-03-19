@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="menu">
+    <header>
+        <img src="assets/logo.png" id="logo">
         <nav class="menu__nav">
-            <a href="#">LOGO</a>
-            <ul>
-                <li><a href="#">Início</a></li>
-            </ul>
+            <a href="#">Início</a>
+            <a href="#">Serviços de saúde</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="#">Dicas de saúde</a>
+            <a href="#">Feedback</a>
+            <a href="#">Contato</a>
         </nav>
     </header>
-    <main class="apresentacao">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime porro, voluptatem laborum praesentium nihil provident inventore ad vero esse itaque obcaecati! Autem omnis officiis rem sed perspiciatis cum placeat!</p>
-        <img src="assets/logo.png">
-    </main>
+    <section class="introducao">
+        <section class="introducao__conteudo">
+            <h1 class="introducao__conteudo__titulo">Mais saúde nas escolas</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime porro, voluptatem laborum praesentium nihil provident inventore ad vero esse itaque obcaecati! Autem omnis officiis rem sed perspiciatis cum placeat!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quo optio delectus magnam, saepe nisi perspiciatis totam nostrum odit placeat, sit iusto qui doloribus debitis maiores amet quas laudantium cumque?</p>
+            <div class="introducao__links">
+                <a class="introducao__links__link" href="#servicos-saude">SAIBA MAIS</a>
+            </div>
+        </section>
+        <img src="assets/palestra-nas-escolas.jpg" width="500rem">
+    </section>
+    <hr>
+    <section class="servicos-saude" id="servicos-saude">
+        <section class="servicos-saude__conteudo">
+            <h2 class="servicos-saude__conteudo__subtitulo">O que é o SUS?</h2>
+            <p>O <strong> Sistema Único de Saúde (SUS)</strong> é o sistema público de saúde do Brasil, que garante o acesso gratuito a todos os cidadãos a uma variedade de serviços de saúde, incluindo atendimentos de urgência e emergência, consultas médicas, exames e internações.</p>
+            <p>Este sistema é fundamental para a promoção da saúde, prevenção de doenças e cuidados médicos contínuos, assegurando a todos os brasileiros o direito ao acesso à saúde.</p>
+            <br>
+            <h2 class="servicos-saude__conteudo__subtitulo">Quando Procurar Cada Tipo de Serviço de Saúde?</h2>
+
+            <ul>
+                <li>
+                    <h3>Unidade de Pronto Atendimento (UPA)</h3>
+                    <p>A UPA é destinada a casos de <strong>urgência</strong>, como dores fortes, febres altas, cortes profundos, dificuldades respiratórias, etc. Nela, são feitos atendimentos rápidos para estabilizar o paciente e, se necessário, encaminhá-lo para outros serviços.</p>
+                </li>
+            </ul>
+            <div class="servicos-saude__links">
+                <a href="quiz.html" class="servicos-saude__links__link">Clique aqui para acessar nosso quiz</a>
+            </div>
+        </section>
+        <img src="assets/servicos-de-saude.jpg" width="500rem">
+    </section>
     <footer>Footer</footer>
 </body>
 </html>
