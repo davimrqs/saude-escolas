@@ -160,8 +160,10 @@ footer {
 }
 
 /* Quiz */
-.hidden {
+.images {
     display: none;
+    width: 15rem;
+    margin: 0;
 }
 
 /* Quiz */
@@ -182,6 +184,25 @@ footer {
     width: 50%;
     padding: 5%;
     background-color: #aebbcc;
+}
+
+.quiz-container__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    display: none;
+}
+
+.quiz-container__buttons__button {
+    background-color: var(--button-color);
+    border: 10px solid var(--button-color);
+    color: white;
+    border-radius: 10px;
+}
+
+
+.quiz-container.hidden {
+    display: none;
 }
 
 .quiz-container__title {
@@ -229,7 +250,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-weight: 600;
 }
 
@@ -244,9 +266,6 @@ footer {
 }
 
 @media only screen and (max-width: 712px){
-    .introducao {
-        flex-wrap: wrap-reverse;
-    }
     
     .servicos-saude {
         flex-wrap: wrap-reverse;
@@ -254,6 +273,15 @@ footer {
         justify-content: center;
     }
     
+    header {
+        position: absolute;
+        width: 100vw;
+    }
+
+    .introducao {
+        flex-wrap: wrap-reverse;
+    }
+
     .servicos-saude img {
         width: 50%;
     }
@@ -296,6 +324,10 @@ footer {
         gap: 1em;
         margin: 0;
         display: none;
+    }
+
+    .menu__nav a {
+
     }
 
     .menu__nav.open {

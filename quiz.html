@@ -15,7 +15,7 @@
         <button id="open-menu">&#9776;</button>
         <nav class="menu__nav">
             <button id="close-menu">X</button>
-            <a href="#">Início</a>
+            <a href="index.html">Início</a>
             <a href="#">Serviços de saúde</a>
             <a href="quiz.html">Quiz</a>
             <a href="#">Dicas de saúde</a>
@@ -29,7 +29,7 @@
 
             <div class="question" id="question1">
                 <p><strong>Qual é o sistema público de saúde do Brasil?</strong></p>
-                <label for="option1" id="option1">
+                <label for="option1">
                     <input type="radio" id="option1" name="q1" value="a"> Sistema de Saúde Privado
                 </label>
                 <label for="option2">
@@ -54,8 +54,13 @@
             <button onclick="showResult()" class="quiz-submit-button">Enviar respostas</button>
             <!-- Resultado -->
         </div>
+        <img id="imagemGanhador" src="assets/ganhador-quiz.png" alt="Você venceu o quiz!" class="images">
+        <img id="imagemPerdedor" src="assets/perdedor-quiz.png" alt="Você perdeu o quiz!" class="images">
         <div id="result"></div>
-        <img id="imagemGanhador" src="assets/ganhador-quiz.jpg" alt="Você venceu o quiz!" class="hidden">
+        <div class="quiz-container__buttons">
+            <button href="#" class="quiz-container__buttons__button">Botão 1</button>
+            <button href="#" class="quiz-container__buttons__button">Botão 2</button>
+        </div>
     </div>
     <footer>Footer</footer>
 </body>

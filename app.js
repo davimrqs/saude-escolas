@@ -3,8 +3,9 @@ const resultDiv = document.getElementById('result');
 //document.getElementById('ganhadorImagem').classList.add('hidden');
 
 let points = 0;
-function resetarJogo() {
 
+function resetarJogo() {
+    points = 0;
 }
 
 function showResult() {
@@ -28,13 +29,28 @@ function showResult() {
             if (selected.value == respostasCorretas[name]){
                 points++;
             }
-            console.log(points);
             // Fazer com que suma o quiz-container
+            const menu = document.querySelector(".quiz-container");
+            const img = document.getElementById("imagemGanhador");
+            const img2 = document.getElementById("imagemPerdedor");
+            const buttons = document.querySelector(".quiz-container__buttons");
+            buttons.style.display = "flex";
+            menu.classList.add("hidden");
             if (points == 2){
                 document.getElementById('result').innerHTML = "Você acertou!";
                 document.getElementById('result').style.color = "red";
-            }else{
+                img.style.display = "flex";
+                img2.style.display = "none";
+            }else if (points > 0 ){
                 document.getElementById('result').innerHTML = "Você acertou com " + points + "tentativas.";
+                document.getElementById('result').style.color = "red";
+                img.style.display = "flex";
+                img2.style.display = "none";
+            }else{
+                console.log(points);
+                img.style.display = "none";
+                img2.style.display = "flex";
+                document.getElementById('result').innerHTML = "<strong>Paciência</strong>... tente novamente!";
                 document.getElementById('result').style.color = "red";
             }
         }
@@ -49,9 +65,16 @@ function showResult() {
 const openMenu = document.getElementById("open-menu");
 const closeMenu = document.getElementById("close-menu");
 const menu = document.querySelector(".menu__nav");
+const menuLinks = document.querySelectorAll(".menu__nav a");
 
 openMenu.addEventListener('click', () => {
     menu.classList.add("open");
+});
+
+menuLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        menu.classList.remove("open");
+    })
 });
 
 closeMenu.addEventListener('click', () => {
