@@ -12,8 +12,10 @@
 <body>
     <header>
         <img src="assets/logo.png" id="logo">
+        <button id="open-menu">&#9776;</button>
         <nav class="menu__nav">
-            <a href="index.html">Início</a>
+            <button id="close-menu">X</button>
+            <a href="#">Início</a>
             <a href="#">Serviços de saúde</a>
             <a href="quiz.html">Quiz</a>
             <a href="#">Dicas de saúde</a>
@@ -21,16 +23,41 @@
             <a href="#">Contato</a>
         </nav>
     </header>
-    <main>
-        <label for="teste">EScreva</label>
-        <label for="teste">EScreva</label>
-        <label for="teste">EScreva</label>
-        <label for="teste">EScreva</label>
-        <input type="checkbox" id="teste">
-        <input type="checkbox" id="teste">
-        <input type="checkbox" id="teste">
-        <input type="checkbox" id="teste">
-    </main>
+    <div class="container">
+        <div class="quiz-container">
+            <h1 class="quiz-container__title">Conhecimento sobre o SUS</h1>
+
+            <div class="question" id="question1">
+                <p><strong>Qual é o sistema público de saúde do Brasil?</strong></p>
+                <label for="option1" id="option1">
+                    <input type="radio" id="option1" name="q1" value="a"> Sistema de Saúde Privado
+                </label>
+                <label for="option2">
+                    <input type="radio" id="option2" name="q1" value="b"> Sistema de Saúde Único (SUS)
+                </label>
+                <label for="option3">
+                    <input type="radio" id="option3" name="q1" value="c"> Sistema de Saúde Familiar
+                </label>
+            </div>
+            <div class="question" id="question2">
+                <p><strong>O que é uma UPA?</strong></p>
+                <label for="option4">
+                    <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
+                </label>
+                <label for="option5">
+                    <input type="radio" id="option5" name="q2" value="b"> Unidade de Policiamento Avançado
+                </label>
+                <label for="option6">
+                    <input type="radio" id="option6" name="q2" value="c"> União de Práticas Ambulatoriais
+                </label>
+            </div>
+            <button onclick="showResult()" class="quiz-submit-button">Enviar respostas</button>
+            <!-- Resultado -->
+        </div>
+        <div id="result"></div>
+        <img id="imagemGanhador" src="assets/ganhador-quiz.jpg" alt="Você venceu o quiz!" class="hidden">
+    </div>
     <footer>Footer</footer>
 </body>
+<script type="text/javascript" src="app.js"></script>
 </html>

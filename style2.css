@@ -36,6 +36,10 @@ header {
     background-color: #8DAEF2;
 }
 
+header nav a {
+    color: white;
+}
+
 header #logo {
     margin-left: 5%;
     width: 8rem;
@@ -96,6 +100,7 @@ header #logo {
 }
 
 .servicos-saude {
+    overflow: hidden;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -147,7 +152,95 @@ h3 {
 footer {
     display: flex;
     height: 50px;
-    background-color: red;
+    background-color: var(--titulo-color);
+    color: white;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Quiz */
+.hidden {
+    display: none;
+}
+
+/* Quiz */
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 5%;
+    background-color: #aebbcc;
+}
+
+.quiz-container__title {
+    color: var(--titulo-color);
+    font-size: 3rem;
+    margin-bottom: 2%;
+}
+
+.quiz-submit-button {
+    background-color: var(--button-color);
+    color: white;
+    font-weight: 600;
+    border: 0px;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.quiz-submit-button:hover {
+    background-color: #d18c50;
+    color: white;
+    font-weight: 600;
+    border: 0px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.question:last-child {
+    margin: 0;
+}
+
+.question label {
+    margin: 1%;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-weight: 600;
+}
+
+#open-menu, #close-menu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5% 0 5%;
+    display: none;
 }
 
 @media only screen and (max-width: 712px){
@@ -157,9 +250,56 @@ footer {
     
     .servicos-saude {
         flex-wrap: wrap-reverse;
+        margin: 5% 10% 5% 10%;
+        justify-content: center;
+    }
+    
+    .servicos-saude img {
+        width: 50%;
     }
 
     .introducao img {
         width: 15rem;
     }
+
+    .quiz-container__title {
+        font-size: 1rem;
+    }
+
+    .quiz-container {
+        width: 100vw;
+    }
+
+    /* Menu responsivo */
+    #open-menu, #close-menu {
+        display: block;
+        color: white;
+    }
+
+    #open-menu {
+        margin-left: auto;
+    }
+
+    #close-menu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    .menu__nav {
+        justify-content: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        gap: 1em;
+        margin: 0;
+        display: none;
+    }
+
+    .menu__nav.open {
+        display: flex;
+    }
+
 }
