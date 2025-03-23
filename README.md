@@ -10,6 +10,6 @@
 
 <strong>As imagens a seguir foram retiradas de uma versão pré-finalizada do site, demonstrando como ele se comporta em dispositivos móveis.</strong>
 
-![image](https://github.com/user-attachments/assets/d3768a7f-ef78-4026-ac58-bd0285194ed6) ![image](https://github.com/user-attachments/assets/96d7d0b4-616a-4abd-886d-39001a4ae742) ![image](https://github.com/user-attachments/assets/3be65885-9348-4c62-abe9-34e022a5f798)
+OBS a se colocar: sistema de avaliações utilizando javascript para enviar os dados ao google sheets
 
 
