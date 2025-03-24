@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" id="logo">
+        <button id="open-menu">&#9776;</button>
+        <nav class="menu__nav">
+            <button id="close-menu">X</button>
+            <a href="index.html">Início</a>
+            <a href="index.html">Serviços de saúde</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="tips.html">Dicas de saúde</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+    <div class="feedback-container">
+        <div class="feedback-wrapper">
+            <h3 class="feedback-title">Deixe seu comentário e/ou sugestão:</h3>
+            <form action="#">
+                <div class="rating">
+                    <a class='star ativo' data-avaliacao='1'></a>
+                    <a class='star' data-avaliacao='2'></a>
+                    <a class='star' data-avaliacao='3'></a>
+                    <a class='star' data-avaliacao='4'></a>
+                    <a class='star' data-avaliacao='5'></a>
+                </div>
+                <div class="textbox">
+                    <textarea name="resenha" id="" cols="30" rows="10" placeholder="Escreva aqui..." alt="área de digitação para submição da resenha"></textarea>
+                </div>
+                <div class="feedback-buttons">
+                    <button type="submit" class="feedback-submit feedback-button">Enviar avaliação</button>
+                    <button onclick="limparFeedback(event)" class="feedback-cancel feedback-button">Cancelar resenha</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>Footer</footer>
+</body>
+<script type="text/javascript" src="app.js"></script>
+</html>

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -16,11 +17,10 @@
         <nav class="menu__nav">
             <button id="close-menu">X</button>
             <a href="index.html">Início</a>
-            <a href="#">Serviços de saúde</a>
+            <a href="index.html">Serviços de saúde</a>
             <a href="quiz.html">Quiz</a>
-            <a href="#">Dicas de saúde</a>
-            <a href="#">Feedback</a>
-            <a href="#">Contato</a>
+            <a href="tips.html">Dicas de saúde</a>
+            <a href="feedback.html">Feedback</a>
         </nav>
     </header>
     <div class="container">
@@ -58,8 +58,7 @@
         <img id="imagemPerdedor" src="assets/perdedor-quiz.png" alt="Você perdeu o quiz!" class="images">
         <div id="result"></div>
         <div class="quiz-container__buttons">
-            <button href="#" class="quiz-container__buttons__button">Botão 1</button>
-            <button href="#" class="quiz-container__buttons__button">Botão 2</button>
+            <button onclick="resetarJogo()" class="quiz-container__buttons__button">Jogar novamente</button>
         </div>
     </div>
     <footer>Footer</footer>

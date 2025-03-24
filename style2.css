@@ -12,6 +12,7 @@
 :root {
     --titulo-color: #1E2D59; 
     --button-color: #F2A25C;
+    --background-color: #aebbcc;
 }
 
 hr {
@@ -25,7 +26,7 @@ nav {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     background-color: #CEDEF2;
 }
@@ -34,6 +35,8 @@ header {
     display: flex;
     flex: 1 1 100vw;
     background-color: #8DAEF2;
+    background-image: linear-gradient(to right, #8DAEF2, #00458f);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 header nav a {
@@ -184,10 +187,12 @@ footer {
     width: 50%;
     padding: 5%;
     background-color: #aebbcc;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .quiz-container__buttons {
-    display: flex;
     justify-content: space-between;
     gap: 10px;
     display: none;
@@ -198,6 +203,15 @@ footer {
     border: 10px solid var(--button-color);
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.quiz-container__buttons__button:hover {
+    background-color: #d18c50;
+    border: 10px solid #d18c50;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -265,25 +279,124 @@ footer {
     display: none;
 }
 
+/* Feedback page */
+.feedback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* 2605 -> estrela cheia && 2606 -> estrela vazia */
+.star {
+    font-size: 2.5rem;
+    color: yellow;
+    cursor: pointer;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5%;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.star::before {
+    content: "\2605";
+}
+.star.ativo ~ .star::before {
+    content: "\2606"
+}
+.rating:hover .star::before {
+    content: "\2605";
+}
+.star:hover ~ .star::before {
+    content: "\2606";
+}
+
+textarea {
+    resize: none;
+}
+
+.feedback-wrapper {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    max-width: 576px;
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+
+    /* inset | offset-x | offset-y | color */
+    /* box-shadow: inset 5em 1em gold; */
+}
+.feedback-title {
+    color: var(--titulo-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.feedback-button {
+    border: 10px solid var(--button-color);
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: white;
+    margin-top: 1em;
+    padding: 0 5% 0 5%;
+    cursor: pointer;
+}
+/* Dicas de saúde */
+.tips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 576px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+.tips__title {
+    color: var(--titulo-color);
+}
+
 @media only screen and (max-width: 712px){
     
     .servicos-saude {
         flex-wrap: wrap-reverse;
         margin: 5% 10% 5% 10%;
         justify-content: center;
+        height: 100vh;
     }
     
     header {
-        position: absolute;
         width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
     }
 
     .introducao {
+        height: 100vh;
         flex-wrap: wrap-reverse;
+        padding-top: 25%;
     }
 
     .servicos-saude img {
-        width: 50%;
+        width: 60%;
     }
 
     .introducao img {
@@ -334,4 +447,11 @@ footer {
         display: flex;
     }
 
+    .feedback-buttons {
+        width: auto;
+    }
+
+    .tips {
+        width: 100vw;
+    }
 }
