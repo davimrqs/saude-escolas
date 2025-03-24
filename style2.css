@@ -92,10 +92,6 @@ header #logo {
     color: white;
 }
 
-.introducao__links__link:hover {
-    /* Nada implementado no passar do mouse */
-}
-
 .introducao__conteudo__titulo {
     margin-bottom: 5%;
     font-size: 3rem;
@@ -437,10 +433,6 @@ textarea {
         gap: 1em;
         margin: 0;
         display: none;
-    }
-
-    .menu__nav a {
-
     }
 
     .menu__nav.open {
