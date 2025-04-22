@@ -54,12 +54,42 @@ header #logo {
 
 header img {
     width: 80%;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 15%;
+    margin: 6%;
 }
-
-#logo:active img {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Sombra ao pressionar */
-    transition: box-shadow 0.3s ease;
-}
+.footer {
+    background-color: var(--titulo-color);
+    color: white;
+    padding: 2rem 5%;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .footer-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--button-color);
+  }
+  
+  .footer-content p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
 
 .menu__nav {
     flex: 1 1 100vw;
@@ -163,7 +193,7 @@ h3 {
 
 footer {
     display: flex;
-    height: 50px;
+    height: 100%;
     background-color: var(--titulo-color);
     color: white;
     font-weight: 300;
@@ -183,12 +213,11 @@ footer {
 .container {
     display: flex;
     width: 100%;
-    margin: 3em 0 0 0;
     min-height: calc(100vh - 50px);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 3em;
 }
 
 .quiz-container {
@@ -269,6 +298,12 @@ footer {
 
 .question label {
     margin: 1%;
+}
+
+.question-title {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
+    text-align: center;
 }
 
 #result {
@@ -405,7 +440,9 @@ textarea {
 }
 
 @media only screen and (max-width: 712px){
-    
+    .container {
+        padding-top: 12.5em;
+    }
     .servicos-saude {
         flex-wrap: wrap-reverse;
         margin: 5% 10% 5% 10%;

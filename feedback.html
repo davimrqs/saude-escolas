@@ -39,13 +39,26 @@
                     <textarea name="resenha" id="" cols="30" rows="10" placeholder="Escreva aqui..." alt="área de digitação para submição da resenha"></textarea>
                 </div>
                 <div class="feedback-buttons">
-                    <button type="submit" class="feedback-submit feedback-button">Enviar avaliação</button>
+                    <button onclick="enviarFeedback()" class="feedback-submit feedback-button">Enviar avaliação</button>
                     <button onclick="limparFeedback(event)" class="feedback-cancel feedback-button">Cancelar resenha</button>
                 </div>
             </form>
         </div>
     </div>
-    <footer>Footer</footer>
+    <footer class="footer">
+        <div class="footer-content">
+          <h4>Sobre o Projeto</h4>
+          <p class="footer-text">
+            Iniciativa para ensinar jovens das escolas públicas do DF sobre o SUS e como usá-lo corretamente. Com isso, buscamos facilitar o acesso, reduzir filas e melhorar o atendimento nas unidades de saúde.
+          </p>
+          <p class="footer-text mobile-hidden">
+            Também propomos materiais impressos e este site interativo para tornar o conhecimento mais acessível à população.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Projeto Mais Saúde nas Escolas</p>
+        </div>
+      </footer>
 </body>
 <script type="text/javascript" src="app.js"></script>
 </html>

@@ -29,7 +29,7 @@
             <h1 class="quiz-container__title">Conhecimento sobre o SUS</h1>
 
             <div class="question" id="question1">
-                <p><strong>Qual é o sistema público de saúde do Brasil?</strong></p>
+                <p class="question-title"><strong>Qual é o sistema público de saúde do Brasil?</strong></p>
                 <label for="option1">
                     <input type="radio" id="option1" name="q1" value="a"> Sistema de Saúde Privado
                 </label>
@@ -41,7 +41,7 @@
                 </label>
             </div>
             <div class="question" id="question2">
-                <p><strong>O que é uma UPA?</strong></p>
+                <p class="question-title"><strong>O que é uma UPA?</strong></p>
                 <label for="option4">
                     <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
                 </label>
@@ -53,53 +53,30 @@
                 </label>
             </div>
             <div class="question" id="question3">
-                <p><strong>O que é uma UPA?</strong></p>
-                <label for="option4">
-                    <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
+                <p class="question-title"><strong>Para tomar vacinas do calendário nacional, você deve ir a:</strong></p>
+                <label for="option7">
+                    <input type="radio" id="option7" name="q3" value="a"> Hospital
                 </label>
-                <label for="option5">
-                    <input type="radio" id="option5" name="q2" value="b"> Unidade de Policiamento Avançado
+                <label for="option8">
+                    <input type="radio" id="option8" name="q3" value="b"> UPA
                 </label>
-                <label for="option6">
-                    <input type="radio" id="option6" name="q2" value="c"> União de Práticas Ambulatoriais
-                </label>
-            </div>
-            <div class="question" id="question2">
-                <p><strong>O que é uma UPA?</strong></p>
-                <label for="option4">
-                    <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
-                </label>
-                <label for="option5">
-                    <input type="radio" id="option5" name="q2" value="b"> Unidade de Policiamento Avançado
-                </label>
-                <label for="option6">
-                    <input type="radio" id="option6" name="q2" value="c"> União de Práticas Ambulatoriais
+                <label for="option9">
+                    <input type="radio" id="option9" name="q3" value="c"> UBS
                 </label>
             </div>
-            <div class="question" id="question2">
-                <p><strong>O que é uma UPA?</strong></p>
-                <label for="option4">
-                    <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
+            <div class="question" id="question4">
+                <p class="question-title"><strong>Quem pode ser atendido pelo SUS?</strong></p>
+                <label for="option10">
+                    <input type="radio" id="option10" name="q4" value="a"> Somente brasileiros com renda baixa
                 </label>
-                <label for="option5">
-                    <input type="radio" id="option5" name="q2" value="b"> Unidade de Policiamento Avançado
+                <label for="option11">
+                    <input type="radio" id="option11" name="q4" value="b"> Qualquer pessoa, incluindo estrangeiros
                 </label>
-                <label for="option6">
-                    <input type="radio" id="option6" name="q2" value="c"> União de Práticas Ambulatoriais
-                </label>
-            </div>
-            <div class="question" id="question2">
-                <p><strong>O que é uma UPA?</strong></p>
-                <label for="option4">
-                    <input type="radio" id="option4" name="q2" value="a"> Unidade de Pronto Atendimento
-                </label>
-                <label for="option5">
-                    <input type="radio" id="option5" name="q2" value="b"> Unidade de Policiamento Avançado
-                </label>
-                <label for="option6">
-                    <input type="radio" id="option6" name="q2" value="c"> União de Práticas Ambulatoriais
+                <label for="option12">
+                    <input type="radio" id="option12" name="q4" value="c"> Apenas pessoas sem plano de saúde
                 </label>
             </div>
+            
             <button onclick="showResult()" class="quiz-submit-button">Enviar respostas</button>
             <!-- Resultado -->
         </div>
@@ -110,7 +87,20 @@
             <button onclick="resetarJogo()" class="quiz-container__buttons__button">Jogar novamente</button>
         </div>
     </div>
-    <footer>Footer</footer>
+    <footer class="footer">
+        <div class="footer-content">
+          <h4>Sobre o Projeto</h4>
+          <p class="footer-text">
+            Iniciativa para ensinar jovens das escolas públicas do DF sobre o SUS e como usá-lo corretamente. Com isso, buscamos facilitar o acesso, reduzir filas e melhorar o atendimento nas unidades de saúde.
+          </p>
+          <p class="footer-text mobile-hidden">
+            Também propomos materiais impressos e este site interativo para tornar o conhecimento mais acessível à população.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Projeto SUS nas Escolas</p>
+        </div>
+      </footer>
 </body>
 <script type="text/javascript" src="app.js"></script>
 </html>

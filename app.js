@@ -3,6 +3,7 @@ const resultDiv = document.getElementById('result');
 //document.getElementById('ganhadorImagem').classList.add('hidden');
 
 let points = 0;
+const questions = document.querySelectorAll('.question');
 
 function resetarJogo() {
     const menu = document.querySelector(".quiz-container");
@@ -23,7 +24,7 @@ function resetarJogo() {
 
 // Trocar de código para pegar o ID do quiz e adicionar um listener event para submit
 function showResult() {
-
+    let teste = 0;
     const q1 = document.querySelector('input[name="q1"]:checked');
     const q2 = document.querySelector('input[name="q2"]:checked');
     const q3 = document.querySelector('input[name="q3"]:checked');
@@ -32,12 +33,16 @@ function showResult() {
     let formIsValid = true;
     const respostasCorretas = {
         "q1": "b",
-        "q2": "a"
+        "q2": "a",
+        "q3": "c",
+        "q4": "b"
     };
     questions.forEach(function(question) {
-        
         const selected = question.querySelector('input[type="radio"]:checked')
-        if (!selected) {
+        if (selected) {
+            teste++;
+        }
+        if (teste < questions.length) {
             formIsValid = false;
         if (!formIsValid){
             document.getElementById('result').innerHTML = "Selecione todas as opções antes de enviar o texto.";
@@ -57,13 +62,13 @@ function showResult() {
             buttons.style.display = "flex";
             menu.classList.add("hidden");
             document.getElementById("result").style.display = "flex";
-            if (points == 2){
+            if (points == 3){
                 document.getElementById('result').innerHTML = "Você acertou todas as questões. Parabéns!";
                 document.getElementById('result').style.color = "green";
                 img.style.display = "flex";
                 img2.style.display = "none";
             }else if (points > 0 ){
-                document.getElementById('result').innerHTML = "Você acertou  " + points + " questões de 2. Parabéns!";
+                document.getElementById('result').innerHTML = "Você acertou  " + points + " questões de 4. Parabéns!";
                 document.getElementById('result').style.color = "orange";
                 img.style.display = "flex";
                 img2.style.display = "none";
@@ -103,7 +108,9 @@ closeMenu.addEventListener('click', () => {
 
 // Feedback
 var allStars = document.querySelectorAll('.star');
-
+function enviarFeedback() {
+    alert("Função ainda não atribuída.");
+}
 function limparFeedback(event) {
     event.preventDefault();
     document.querySelector('textarea[name="resenha"]').value = "";
@@ -121,10 +128,12 @@ function limparFeedback(event) {
 
 document.addEventListener('click', function(e) {
     var clickedStar = e.target.classList;
-    if (!clickedStar.contains('ativo')) {
-        allStars.forEach(function(star){
-            star.classList.remove('ativo');
-        });
-        clickedStar.add('ativo');
+    if (clickedStar.contains('star')) {
+        if (!clickedStar.contains('ativo')) {
+            allStars.forEach(function(star){
+                star.classList.remove('ativo');
+            });
+            clickedStar.add('ativo');
+        }
     }
 });
