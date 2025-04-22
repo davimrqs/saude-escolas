@@ -5,10 +5,14 @@
     text-decoration: none;
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     transition: all 0.3s ease;
+    /* outline: 1px solid red; */
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
 :root {
     --titulo-color: #1E2D59; 
@@ -50,6 +54,11 @@ header #logo {
 
 header img {
     width: 80%;
+}
+
+#logo:active img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Sombra ao pressionar */
+    transition: box-shadow 0.3s ease;
 }
 
 .menu__nav {
@@ -173,11 +182,13 @@ footer {
 
 .container {
     display: flex;
-    width: 100vw;
-    height: calc(100vh - 50px);
+    width: 100%;
+    margin: 3em 0 0 0;
+    min-height: calc(100vh - 50px);
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 .quiz-container {

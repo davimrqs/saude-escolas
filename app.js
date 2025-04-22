@@ -26,6 +26,8 @@ function showResult() {
 
     const q1 = document.querySelector('input[name="q1"]:checked');
     const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+    const q4 = document.querySelector('input[name="q4"]:checked');
     const questions = document.querySelectorAll('.question');
     let formIsValid = true;
     const respostasCorretas = {
