@@ -1,6 +1,7 @@
 const resultDiv = document.getElementById('result');
 //document.getElementById('ganhadorImagem').classList.remove('hidden');
 //document.getElementById('ganhadorImagem').classList.add('hidden');
+//teste
 
 let points = 0;
 const questions = document.querySelectorAll('.question');
