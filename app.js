@@ -50,10 +50,14 @@ function showResult() {
             return;
         }
         }else{
-            const name = selected.name;
-            if (selected.value == respostasCorretas[name]){
-                points++;
-            }
+            questions.forEach(function(question) {
+                let teste = question.querySelector('input[type="radio"]:checked');
+                if (teste.value == respostasCorretas[teste.name]){
+                    points++;
+                }
+                console.log(question.querySelector('input[type="radio"]:checked'));
+            })
+            
             // Fazer com que suma o quiz-container
             const menu = document.querySelector(".quiz-container");
             const img = document.getElementById("imagemGanhador");
@@ -62,7 +66,7 @@ function showResult() {
             buttons.style.display = "flex";
             menu.classList.add("hidden");
             document.getElementById("result").style.display = "flex";
-            if (points == 3){
+            if (points == 4){
                 document.getElementById('result').innerHTML = "Você acertou todas as questões. Parabéns!";
                 document.getElementById('result').style.color = "green";
                 img.style.display = "flex";
